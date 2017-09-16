@@ -1,0 +1,10 @@
+achievement loading failed due to folloiwing logcat error report, therefore added activity. 09-16 16:37:43.321: D/Unity(1703): 
+		JNI:DisplayListenerAvailable:android.content.ActivityNotFoundException: 
+		Unable to find explicit activity class 
+		{com.jiwan.lollygaggertutorial/com.google.games.bridge.NativeBridgeActivity}; 
+		have you declared this activity in your AndroidManifest.xml? -->
+		
+		와 관련한 오류가 날때는, AndroidManifest.xml에 아래의 태그를 추가해준다.
+		
+		<activity android:name="com.google.games.bridge.NativeBridgeActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
